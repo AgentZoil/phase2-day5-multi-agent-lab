@@ -34,8 +34,15 @@ class SourceDocument(BaseModel):
 
 
 class BenchmarkMetrics(BaseModel):
+    case_id: str = "default_case"
+    run_id: str = ""
+    trace_link: str = ""
     run_name: str
     latency_seconds: float
     estimated_cost_usd: float | None = None
     quality_score: float | None = Field(default=None, ge=0, le=10)
+    validation_passed: bool | None = None
+    source_count: int | None = Field(default=None, ge=0)
+    error_count: int | None = Field(default=None, ge=0)
+    trace_events: int | None = Field(default=None, ge=0)
     notes: str = ""
