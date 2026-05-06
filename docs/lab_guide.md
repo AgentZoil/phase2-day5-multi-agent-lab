@@ -23,6 +23,7 @@ File gợi ý:
 - `src/multi_agent_research_lab/services/llm_client.py`
 
 TODO(student): thay baseline placeholder bằng một call LLM thật.
+Baseline phải gọi LLM thật và có fallback nếu provider không khả dụng.
 
 ## Milestone 2: Supervisor
 
@@ -32,6 +33,7 @@ File gợi ý:
 - `src/multi_agent_research_lab/graph/workflow.py`
 
 TODO(student): implement routing policy.
+Supervisor cần có routing policy rõ ràng và có stop condition.
 
 Gợi ý câu hỏi thiết kế:
 
@@ -50,6 +52,7 @@ File gợi ý:
 - `agents/writer.py`
 
 TODO(student): implement từng worker.
+Mỗi worker agent phải có trách nhiệm riêng và trace được đầu ra của mình.
 
 ## Milestone 4: Trace và benchmark
 
@@ -58,6 +61,14 @@ File gợi ý:
 - `observability/tracing.py`
 - `evaluation/benchmark.py`
 - `evaluation/report.py`
+
+Chạy benchmark sau khi có baseline và multi-agent:
+
+```bash
+python -m multi_agent_research_lab.cli benchmark \
+  --query "Research GraphRAG state-of-the-art and write a 500-word summary" \
+  --output benchmark_report.md
+```
 
 Benchmark tối thiểu:
 
