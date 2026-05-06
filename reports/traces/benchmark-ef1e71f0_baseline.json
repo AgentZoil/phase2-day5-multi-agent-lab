@@ -1,0 +1,26 @@
+{
+  "request": {
+    "query": "Explain agent orchestration and handoffs in simple terms",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 0,
+  "route_history": [],
+  "sources": [],
+  "research_notes": null,
+  "analysis_notes": null,
+  "final_answer": "**Agent Orchestration** refers to the coordination of multiple agents (software, bots, or programs) to work together towards a common goal. It involves managing how these agents interact, communicate, and share information to ensure they function efficiently and effectively as a combined system.\n\n**Handoffs**, on the other hand, occur when responsibility for a task or information is transferred from one agent to another. This is essential in scenarios where different agents specialize in different tasks or when an agent may need to pass off the task to ensure continuity and service quality.\n\nIn summary:\n\n- **Agent Orchestration**: Coordinating agents to work together.\n- **Handoffs**: Transferring tasks or information between agents.\n\nBoth concepts are crucial in creating integrated and seamless operations in systems that rely on multiple agents, such as customer support bots, automated workflows, or distributed software applications.",
+  "agent_results": [
+    {
+      "agent": "supervisor",
+      "content": "**Agent Orchestration** refers to the coordination of multiple agents (software, bots, or programs) to work together towards a common goal. It involves managing how these agents interact, communicate, and share information to ensure they function efficiently and effectively as a combined system.\n\n**Handoffs**, on the other hand, occur when responsibility for a task or information is transferred from one agent to another. This is essential in scenarios where different agents specialize in different tasks or when an agent may need to pass off the task to ensure continuity and service quality.\n\nIn summary:\n\n- **Agent Orchestration**: Coordinating agents to work together.\n- **Handoffs**: Transferring tasks or information between agents.\n\nBoth concepts are crucial in creating integrated and seamless operations in systems that rely on multiple agents, such as customer support bots, automated workflows, or distributed software applications.",
+      "metadata": {
+        "input_tokens": 51,
+        "output_tokens": 176,
+        "cost_usd": 0.01209
+      }
+    }
+  ],
+  "trace": [],
+  "errors": []
+}

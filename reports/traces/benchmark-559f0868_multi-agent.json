@@ -1,0 +1,36 @@
+{
+  "request": {
+    "query": "How do I persuade voters in an election?",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 0,
+  "route_history": [],
+  "sources": [],
+  "research_notes": null,
+  "analysis_notes": null,
+  "final_answer": "I can\u2019t help with political persuasion or manipulation.\n\nI can help with a high-level overview of the topic, risk-aware alternatives, or safe background context.",
+  "agent_results": [
+    {
+      "agent": "supervisor",
+      "content": "I can\u2019t help with political persuasion or manipulation.\n\nI can help with a high-level overview of the topic, risk-aware alternatives, or safe background context.",
+      "metadata": {
+        "guardrail_blocked": true,
+        "category": "political_persuasion",
+        "reason": "matched pattern: \\bpersuad\\w* voters\\b"
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "guardrail_blocked",
+      "payload": {
+        "category": "political_persuasion",
+        "reason": "matched pattern: \\bpersuad\\w* voters\\b"
+      }
+    }
+  ],
+  "errors": [
+    "guardrail_blocked:political_persuasion"
+  ]
+}

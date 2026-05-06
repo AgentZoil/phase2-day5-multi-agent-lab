@@ -1,0 +1,204 @@
+{
+  "request": {
+    "query": "Compare RAG and GraphRAG for technical learners",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 3,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer"
+  ],
+  "sources": [
+    {
+      "title": "Comparing RAG and GraphRAG for Page-Level Retrieval Question Answering on Math Textbook",
+      "url": "http://arxiv.org/abs/2509.16780v2",
+      "snippet": "Technology-enhanced learning environments often help students retrieve relevant learning content for questions arising during self-paced study. Large language models (LLMs) have emerged as novel aids for information retrieval during learning. While LLMs are effective for general-purpose question-answering, they typically lack alignment with the domain knowledge of specific course materials such as textbooks and slides. We investigate Retrieval-Augmented Generation (RAG) and GraphRAG, a knowledge graph-enhanced RAG approach, for page-level question answering in an undergraduate mathematics textbook. While RAG has been effective for retrieving discrete, contextually relevant passages, GraphRAG may excel in modeling interconnected concepts and hierarchical knowledge structures. We curate a dataset of 477 question-answer pairs, each tied to a distinct textbook page. We then compare the standard embedding-based RAG methods to GraphRAG for evaluating both retrieval accuracy-whether the correct page is retrieved-and generated answer quality via F1 scores. Our findings show that embedding-based RAG achieves higher retrieval accuracy and better F1 scores compared to GraphRAG, which tends to retrieve excessive and sometimes irrelevant content due to its entity-based structure. We also explored re-ranking the retrieved pages with LLM and observed mixed results, including performance drop and hallucinations when dealing with larger context windows. Overall, this study highlights both the promises and challenges of page-level retrieval systems in educational contexts, emphasizing the need for more refined retrieval methods to build reliable AI tutoring solutions in providing reference page numbers.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 10.2
+      }
+    },
+    {
+      "title": "Do We Still Need GraphRAG? Benchmarking RAG and GraphRAG for Agentic Search Systems",
+      "url": "http://arxiv.org/abs/2604.09666v1",
+      "snippet": "Retrieval-augmented generation (RAG) and its graph-based extensions (GraphRAG) are effective paradigms for improving large language model (LLM) reasoning by grounding generation in external knowledge. However, most existing RAG and GraphRAG systems operate under static or one-shot retrieval, where a fixed set of documents is provided to the LLM in a single pass. In contrast, recent agentic search systems enable dynamic, multi-round retrieval and sequential decision-making during inference, and have shown strong gains when combined with vanilla RAG by introducing implicit structure through interaction. This progress raises a fundamental question: can agentic search compensate for the absence of explicit graph structure, reducing the need for costly GraphRAG pipelines? To answer this question, we introduce RAGSearch, a unified benchmark that evaluates dense RAG and representative GraphRAG methods as retrieval infrastructures under agentic search. RAGSearch covers both training-free and training-based agentic inference across multiple question answering benchmarks. To ensure fair and reproducible comparison, we standardize the LLM backbone, retrieval budgets, and inference protocols, and report results on full test sets. Beyond answer accuracy, we report offline preprocessing cost, online inference efficiency, and stability. Our results show that agentic search substantially improves dense RAG and narrows the performance gap to GraphRAG, particularly in RL-based settings. Nevertheless, GraphRAG remains advantageous for complex multi-hop reasoning, exhibiting more stable agentic search behavior when its offline cost is amortized. Together, these findings clarify the complementary roles of explicit graph structure and agentic search, and provide practical guidance on retrieval design for modern agentic RAG systems.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 9.2
+      }
+    },
+    {
+      "title": "RAG vs. GraphRAG: A Systematic Evaluation and Key Insights",
+      "url": "http://arxiv.org/abs/2502.11371v3",
+      "snippet": "Retrieval-Augmented Generation (RAG) improves large language models (LLMs) by retrieving relevant information from external sources and has been widely adopted for text-based tasks. For structured data, such as knowledge graphs, Graph Retrieval-Augmented Generation (GraphRAG) retrieves and aggregates information along graph structures. More recently, GraphRAG has been extended to general text settings by organizing unstructured text into graph representations, showing promise for reasoning and grounding. Despite these advances, existing GraphRAG systems for text data are often tailored to specific tasks, datasets, and system designs, resulting in heterogeneous evaluation protocols. Consequently, a systematic understanding of the relative strengths, limitations, and trade-offs between RAG and GraphRAG on widely used text benchmarks remains limited. In this paper, we present a comprehensive benchmark study comparing RAG and GraphRAG on established text-based tasks, including question answering and query-based summarization. We introduce a unified evaluation protocol that standardizes data preprocessing, retrieval configurations, and generation settings, enabling fair and reproducible comparisons. Our results highlight the distinct strengths of RAG and GraphRAG across different tasks and evaluation perspectives. Building on these findings, we explore selection and integration strategies that combine the strengths of both paradigms, leading to consistent performance improvements. We further analyze failure modes, efficiency trade-offs, and evaluation biases, and highlight key considerations for designing and evaluating retrieval-augmented generation systems.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 9.2
+      }
+    },
+    {
+      "title": "Medical Graph RAG: Towards Safe Medical Large Language Model via Graph Retrieval-Augmented Generation",
+      "url": "http://arxiv.org/abs/2408.04187",
+      "snippet": "We introduce a novel graph-based Retrieval-Augmented Generation (RAG) framework specifically designed for the medical domain, called \\textbf{MedGraphRAG}, aimed at enhancing Large Language Model (LLM) capabilities for generating evidence-based medical responses, thereby improving safety and reliability when handling private medical data. Graph-based RAG (GraphRAG) leverages LLMs to organize RAG data into graphs, showing strong potential for gaining holistic insights from long-form documents. However, its standard implementation is overly complex for general use and lacks the ability to generate evidence-based responses, limiting its effectiveness in the medical field. To extend the capabilities of GraphRAG to the medical domain, we propose unique Triple Graph Construction and U-Retrieval techniques over it. In our graph construction, we create a triple-linked structure that connects user documents to credible medical sources and controlled vocabularies. In the retrieval process, we propose U-Retrieval which combines Top-down Precise Retrieval with Bottom-up Response Refinement to balance global context awareness with precise indexing. These effort enable both source information retrieval and comprehensive response generation. Our approach is validated on 9 medical Q\\&A benchmarks, 2 health fact-checking benchmarks, and one collected dataset testing long-form generation. The results show that MedGraphRAG consistently outperforms state-of-the-art models across all benchmarks, while also ensuring that responses include credible source documentation and definitions. Our code is released at: https://github.com/MedicineToken/Medical-Graph-RAG.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 29,
+        "publication_year": 2024,
+        "rank_score": 7.99
+      }
+    },
+    {
+      "title": "When to use Graphs in RAG: A Comprehensive Analysis for Graph Retrieval-Augmented Generation",
+      "url": "http://arxiv.org/abs/2506.05690v3",
+      "snippet": "Graph retrieval-augmented generation (GraphRAG) has emerged as a powerful paradigm for enhancing large language models (LLMs) with external knowledge. It leverages graphs to model the hierarchical structure between specific concepts, enabling more coherent and effective knowledge retrieval for accurate reasoning.Despite its conceptual promise, recent studies report that GraphRAG frequently underperforms vanilla RAG on many real-world tasks. This raises a critical question: Is GraphRAG really effective, and in which scenarios do graph structures provide measurable benefits for RAG systems? To address this, we propose GraphRAG-Bench, a comprehensive benchmark designed to evaluate GraphRAG models onboth hierarchical knowledge retrieval and deep contextual reasoning. GraphRAG-Bench features a comprehensive dataset with tasks of increasing difficulty, coveringfact retrieval, complex reasoning, contextual summarization, and creative generation, and a systematic evaluation across the entire pipeline, from graph constructionand knowledge retrieval to final generation. Leveraging this novel benchmark, we systematically investigate the conditions when GraphRAG surpasses traditional RAG and the underlying reasons for its success, offering guidelines for its practical application. All related resources and analyses are collected for the community at https://github.com/GraphRAG-Bench/GraphRAG-Benchmark.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 7.2
+      }
+    }
+  ],
+  "research_notes": "**Research notes for: Compare RAG and GraphRAG for technical learners**  \n**Core topic:** Comparison of Retrieval-Augmented Generation (RAG) and Graph Retrieval-Augmented Generation (GraphRAG) methodologies in educational contexts.\n\n**Key takeaways:**\n- **RAG Overview:** RAG is effective in retrieving specific, relevant passages and demonstrates higher accuracy in retrieval tasks compared to GraphRAG, which can struggle with irrelevant content due to its entity-based approach.\n- **GraphRAG Advantages:** GraphRAG excels in modeling interconnected concepts and complex reasoning through its use of knowledge graphs, making it effective for multi-hop reasoning scenarios.\n- **Dynamic vs. Static Retrieval:** Traditional RAG systems utilize static retrieval methods, while new agentic search systems offer dynamic retrieval capabilities that can mitigate some limitations of traditional RAG, thus reducing the need for GraphRAG in certain contexts.\n- **Performance Evaluations:** Benchmark studies suggest that while RAG performs better in retrieval accuracy, GraphRAG provides advantages in structured multi-hop reasoning. The two approaches have distinct strengths depending on the task.\n- **Application in Education:** Both RAG and GraphRAG can enhance learning environments by providing better retrieval mechanisms for educational content, but practical implementation still faces challenges related to the generation quality and accuracy of retrieved information.\n- **Medical Domain with MedGraphRAG:** A specialized adaptation of GraphRAG designed for the medical field emphasizes the need for evidence-based reasoning, suggesting domain-specific adaptations can enhance the utility of GraphRAG.\n\n**Recommended next step:** Further investigation is warranted into the specific contexts where GraphRAG outperforms RAG, as well as the integration strategies that could leverage both methods in a complementary manner for improved educational AI applications. Additionally, examining real-world implementation challenges and potential refinements could inform future research and practical applications.",
+  "analysis_notes": "**Analysis Summary:**\n\n- **Source Coverage:** The gathered research covers various aspects of RAG and GraphRAG methodologies, particularly in educational contexts, dynamic retrieval capabilities, medical applications, and benchmark evaluations. Multiple studies highlight strengths and weaknesses in retrieval accuracy and reasoning capabilities.\n\n- **Key Themes:** \n  1. **Retrieval Accuracy:** Traditional RAG shows higher accuracy in straightforward retrieval tasks, whereas GraphRAG excels in modeling complex relationships and reasoning.\n  2. **Dynamic Retrieval Versus Static Methods:** Advances in agentic search systems may lessen reliance on GraphRAG, as they improve RAG's effectiveness through dynamic capabilities.\n  3. **Application to Education and Specific Domains:** Both methodologies can enhance educational tools, but they face challenges in generation quality. Domain-specific adaptations (e.g., MedGraphRAG) improve utility in specialized contexts.\n\n- **Strong Signals:** \n  1. RAG\u2019s robust performance in standard retrieval tasks is a significant advantage.\n  2. The ability of GraphRAG to handle multi-hop reasoning is crucial for applications requiring deep contextual understanding.\n  3. The development of benchmarks (like GraphRAG-Bench) promotes structured evaluation of use cases.\n\n- **Gaps / Risks:** \n  1. GraphRAG often retrieves excessive and irrelevant content, which limits its practicality for straightforward tasks.\n  2. The successes of agentic search may overshadow GraphRAG, making it less prioritized for development despite its unique strengths.\n  3. Issues like hallucination in generated responses during dynamic retrieval need to be addressed to ensure reliability.\n\n- **Next Step:** Conduct a focused investigation on the specific contexts where GraphRAG outperforms RAG, determining optimal integration strategies for leveraging both methodologies. Explore practical challenges in real-world implementations and enhance understanding of scenarios where explicit graph structure can provide measurable benefits.",
+  "final_answer": "Final answer for: Compare RAG and GraphRAG for technical learners\n\nSummary:\n- RAG (Retrieval-Augmented Generation) excels in retrieval accuracy for straightforward tasks, while GraphRAG (Graph Retrieval-Augmented Generation) shines in handling complex, interconnected reasoning through knowledge graphs, although it may retrieve irrelevant content.\n- The emergence of dynamic retrieval systems may reduce reliance on GraphRAG for basic tasks due to enhanced performance in traditional RAG setups.\n- Both methodologies offer benefits in educational contexts but face challenges in maintaining generation quality and practical implementation.\n- Domain-specific adaptations, like MedGraphRAG, further enhance the applicability of GraphRAG in specialized fields such as medicine.\n\nEvidence snapshot:\n- Key studies, including those focusing on benchmark evaluations and practical applications in education, highlight strengths and weaknesses of both methodologies (e.g., arXiv papers referenced) but indicate no conclusive consensus recommending one over the other for all scenarios.\n\nTakeaway: RAG and GraphRAG each have unique strengths that cater to different retrieval and reasoning needs, suggesting a complementary use may yield optimal results in educational AI applications.",
+  "agent_results": [
+    {
+      "agent": "researcher",
+      "content": "**Research notes for: Compare RAG and GraphRAG for technical learners**  \n**Core topic:** Comparison of Retrieval-Augmented Generation (RAG) and Graph Retrieval-Augmented Generation (GraphRAG) methodologies in educational contexts.\n\n**Key takeaways:**\n- **RAG Overview:** RAG is effective in retrieving specific, relevant passages and demonstrates higher accuracy in retrieval tasks compared to GraphRAG, which can struggle with irrelevant content due to its entity-based approach.\n- **GraphRAG Advantages:** GraphRAG excels in modeling interconnected concepts and complex reasoning through its use of knowledge graphs, making it effective for multi-hop reasoning scenarios.\n- **Dynamic vs. Static Retrieval:** Traditional RAG systems utilize static retrieval methods, while new agentic search systems offer dynamic retrieval capabilities that can mitigate some limitations of traditional RAG, thus reducing the need for GraphRAG in certain contexts.\n- **Performance Evaluations:** Benchmark studies suggest that while RAG performs better in retrieval accuracy, GraphRAG provides advantages in structured multi-hop reasoning. The two approaches have distinct strengths depending on the task.\n- **Application in Education:** Both RAG and GraphRAG can enhance learning environments by providing better retrieval mechanisms for educational content, but practical implementation still faces challenges related to the generation quality and accuracy of retrieved information.\n- **Medical Domain with MedGraphRAG:** A specialized adaptation of GraphRAG designed for the medical field emphasizes the need for evidence-based reasoning, suggesting domain-specific adaptations can enhance the utility of GraphRAG.\n\n**Recommended next step:** Further investigation is warranted into the specific contexts where GraphRAG outperforms RAG, as well as the integration strategies that could leverage both methods in a complementary manner for improved educational AI applications. Additionally, examining real-world implementation challenges and potential refinements could inform future research and practical applications.",
+      "metadata": {
+        "source_count": 5,
+        "keywords": [
+          "compare",
+          "rag",
+          "graphrag",
+          "technical",
+          "learners"
+        ],
+        "mode": "llm",
+        "input_tokens": 1672,
+        "output_tokens": 368,
+        "cost_usd": 0.07224,
+        "fallback": null
+      }
+    },
+    {
+      "agent": "analyst",
+      "content": "**Analysis Summary:**\n\n- **Source Coverage:** The gathered research covers various aspects of RAG and GraphRAG methodologies, particularly in educational contexts, dynamic retrieval capabilities, medical applications, and benchmark evaluations. Multiple studies highlight strengths and weaknesses in retrieval accuracy and reasoning capabilities.\n\n- **Key Themes:** \n  1. **Retrieval Accuracy:** Traditional RAG shows higher accuracy in straightforward retrieval tasks, whereas GraphRAG excels in modeling complex relationships and reasoning.\n  2. **Dynamic Retrieval Versus Static Methods:** Advances in agentic search systems may lessen reliance on GraphRAG, as they improve RAG's effectiveness through dynamic capabilities.\n  3. **Application to Education and Specific Domains:** Both methodologies can enhance educational tools, but they face challenges in generation quality. Domain-specific adaptations (e.g., MedGraphRAG) improve utility in specialized contexts.\n\n- **Strong Signals:** \n  1. RAG\u2019s robust performance in standard retrieval tasks is a significant advantage.\n  2. The ability of GraphRAG to handle multi-hop reasoning is crucial for applications requiring deep contextual understanding.\n  3. The development of benchmarks (like GraphRAG-Bench) promotes structured evaluation of use cases.\n\n- **Gaps / Risks:** \n  1. GraphRAG often retrieves excessive and irrelevant content, which limits its practicality for straightforward tasks.\n  2. The successes of agentic search may overshadow GraphRAG, making it less prioritized for development despite its unique strengths.\n  3. Issues like hallucination in generated responses during dynamic retrieval need to be addressed to ensure reliability.\n\n- **Next Step:** Conduct a focused investigation on the specific contexts where GraphRAG outperforms RAG, determining optimal integration strategies for leveraging both methodologies. Explore practical challenges in real-world implementations and enhance understanding of scenarios where explicit graph structure can provide measurable benefits.",
+      "metadata": {
+        "source_count": 5,
+        "key_points": [
+          "compare",
+          "graphrag",
+          "technical",
+          "learners"
+        ],
+        "mode": "llm",
+        "input_tokens": 2028,
+        "output_tokens": 377,
+        "cost_usd": 0.08346,
+        "gap_summary": "No major gap detected from the current synthetic source set."
+      }
+    },
+    {
+      "agent": "writer",
+      "content": "Final answer for: Compare RAG and GraphRAG for technical learners\n\nSummary:\n- RAG (Retrieval-Augmented Generation) excels in retrieval accuracy for straightforward tasks, while GraphRAG (Graph Retrieval-Augmented Generation) shines in handling complex, interconnected reasoning through knowledge graphs, although it may retrieve irrelevant content.\n- The emergence of dynamic retrieval systems may reduce reliance on GraphRAG for basic tasks due to enhanced performance in traditional RAG setups.\n- Both methodologies offer benefits in educational contexts but face challenges in maintaining generation quality and practical implementation.\n- Domain-specific adaptations, like MedGraphRAG, further enhance the applicability of GraphRAG in specialized fields such as medicine.\n\nEvidence snapshot:\n- Key studies, including those focusing on benchmark evaluations and practical applications in education, highlight strengths and weaknesses of both methodologies (e.g., arXiv papers referenced) but indicate no conclusive consensus recommending one over the other for all scenarios.\n\nTakeaway: RAG and GraphRAG each have unique strengths that cater to different retrieval and reasoning needs, suggesting a complementary use may yield optimal results in educational AI applications.",
+      "metadata": {
+        "source_count": 5,
+        "has_analysis": true,
+        "mode": "llm",
+        "input_tokens": 1025,
+        "output_tokens": 222,
+        "cost_usd": 0.04407
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "workflow_start",
+      "payload": {
+        "iteration": 0,
+        "query": "Compare RAG and GraphRAG for technical learners"
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "researcher",
+        "reason": "research_notes missing",
+        "iteration": 1,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "researcher_run",
+      "payload": {
+        "query": "Compare RAG and GraphRAG for technical learners",
+        "source_count": 5,
+        "keywords": [
+          "compare",
+          "rag",
+          "graphrag",
+          "technical",
+          "learners"
+        ],
+        "mode": "llm",
+        "fallback": null
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "analyst",
+        "reason": "analysis_notes missing",
+        "iteration": 2,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "analyst_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "key_points": [
+          "compare",
+          "graphrag",
+          "technical",
+          "learners"
+        ]
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "writer",
+        "reason": "research and analysis available",
+        "iteration": 3,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "writer_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "has_analysis": true
+      }
+    },
+    {
+      "name": "workflow_end",
+      "payload": {
+        "iteration": 3,
+        "route_history": [
+          "researcher",
+          "analyst",
+          "writer"
+        ],
+        "has_final_answer": true
+      }
+    }
+  ],
+  "errors": []
+}

@@ -1,0 +1,210 @@
+{
+  "request": {
+    "query": "Explain agent orchestration and handoffs in simple terms",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 3,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer"
+  ],
+  "sources": [
+    {
+      "title": "Network Slicing and Softwarization: A Survey on Principles, Enabling Technologies, and Solutions",
+      "url": "https://doi.org/10.1109/comst.2018.2815638",
+      "snippet": "Network slicing has been identified as the backbone of the rapidly evolving 5G technology. However, as its consolidation and standardization progress, there are no literatures that comprehensively discuss its key principles, enablers, and research challenges. This paper elaborates network slicing from an end-to-end perspective detailing its historical heritage, principal concepts, enabling technologies and solutions as well as the current standardization efforts. In particular, it overviews the diverse use cases and network requirements of network slicing, the pre-slicing era, considering RAN sharing as well as the end-to-end orchestration and management, encompassing the radio access, transport network and the core network. This paper also provides details of specific slicing solutions for each part of the 5G system. Finally, this paper identifies a number of open research challenges and provides recommendations toward potential solutions.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 1060,
+        "publication_year": 2018,
+        "rank_score": 6.7
+      }
+    },
+    {
+      "title": "Unmanned Aerial Vehicles (UAVs): A Survey on Civil Applications and Key Research Challenges",
+      "url": "https://doi.org/10.1109/access.2019.2909530",
+      "snippet": "The use of unmanned aerial vehicles (UAVs) is growing rapidly across many civil application domains, including real-time monitoring, providing wireless coverage, remote sensing, search and rescue, delivery of goods, security and surveillance, precision agriculture, and civil infrastructure inspection. Smart UAVs are the next big revolution in the UAV technology promising to provide new opportunities in different applications, especially in civil infrastructure in terms of reduced risks and lower cost. Civil infrastructure is expected to dominate more than $45 Billion market value of UAV usage. In this paper, we present UAV civil applications and their challenges. We also discuss the current research trends and provide future insights for potential UAV uses. Furthermore, we present the key challenges for UAV civil applications, including charging challenges, collision avoidance and swarming challenges, and networking and security-related challenges. Based on our review of the recent literature, we discuss open research challenges and draw high-level insights on how these challenges might be approached.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 2188,
+        "publication_year": 2019,
+        "rank_score": 6.7
+      }
+    },
+    {
+      "title": "Programmatic orchestration of WiFi networks",
+      "url": "https://hdl.handle.net/11858/00-001M-0000-002E-9110-D",
+      "snippet": "With wireless technologies becoming prevalent at the last hop, today's network operators need to manage WiFi access networks in unison with their wired counterparts. However, the non-uniformity of feature sets in existing solutions and the lack of programmability makes this a challenging task. This paper proposes Odin, an SDN-based solution to bridge this gap. With Odin, we make the following contributions: (i) Light Virtual Access Points (LVAPs), a novel programming abstraction for addressing the IEEE 802.11 protocol stack complexity, (ii) a design and implementation for a software-defined WiFi network architecture based on LVAPs, and (iii) a prototype implementation on top of commodity access point hardware without modifications to the IEEE 802.11 client, making it practical for today's deployments. To highlight the effectiveness of the approach we demonstrate six WiFi network services on top of Odin including load-balancing, mobility management, jammer detection, automatic channel-selection, energy management, and guest policy enforcement. To further foster the development of our framework, the Odin prototype is made publicly available.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 98,
+        "publication_year": 2014,
+        "rank_score": 6.68
+      }
+    },
+    {
+      "title": "Agentic Verifier-in-the-Loop Solver Orchestration for Cell-Free Massive MIMO Downlink Power Control",
+      "url": "http://arxiv.org/abs/2603.23128v1",
+      "snippet": "Cell-free massive multiple-input multiple-output (MIMO) systems can provide uniformly strong service through distributed access points, but performance still depends critically on downlink power control. Existing methods are typically selected offline and then applied uniformly across channel and load regimes, even though no single solver is uniformly best. We therefore propose VISO-PC, a verifier-in-the-loop solver-orchestration framework in which an agent routes among trusted solvers rather than generating power coefficients directly. Given a structured instance descriptor, the router selects an initial solver and fallback order, and an independent verifier accepts only candidates that satisfy the constraints and produce a valid verified common rate. For fairness-oriented downlink cell-free power control under per-AP constraints, verification-aware orchestration improves accepted rate over all fixed single-solver baselines on a reproducible prototype benchmark. Moreover, a lightweight memory-based router matches the accepted rate of a strong rule-based router while reducing average runtime and fallback rate. These results show that solver orchestration is a practical agentic layer for cell-free massive MIMO downlink power control.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 6.2
+      }
+    },
+    {
+      "title": "Resource Slicing in Virtual Wireless Networks: A Survey",
+      "url": "https://doi.org/10.1109/tnsm.2016.2597295",
+      "snippet": "New architectural and design approaches for radio access networks have appeared with the introduction of network virtualization in the wireless domain. One of these approaches splits the wireless network infrastructure into isolated virtual slices under their own management, requirements, and characteristics. Despite the advances in wireless virtualization, there are still many open issues regarding the resource allocation and isolation of wireless slices. Because of the dynamics and shared nature of the wireless medium, guaranteeing that the traffic on one slice will not affect the traffic on the others has proven to be difficult. In this paper, we focus on the detailed definition of the problem, discussing its challenges. We also provide a review of existing works that deal with the problem, analyzing how new trends such as software defined networking and network function virtualization can assist in the slicing. We will finally describe some research challenges on this topic.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 363,
+        "publication_year": 2016,
+        "rank_score": 5.7
+      }
+    }
+  ],
+  "research_notes": "Research notes for: Explain agent orchestration and handoffs in simple terms  \nCore topic: Agent orchestration and handoffs in networked systems  \n\nKey takeaways:  \n- Agent orchestration refers to the management and coordination of multiple agents (software or hardware components) to perform complex tasks efficiently. It involves decisions on which agent to use for specific functions, often enhancing system performance through dynamic routing among various solvers or services.\n- Handoffs, in networking contexts, signify the transition of control or the continuity of communication as devices move across different network segments or agents. This ensures that the service remains uninterrupted, vital in scenarios like mobile communications or networked drones.\n- Various applications of agent orchestration are observed in advanced technologies, including network slicing in 5G, software-defined networks (SDN), and unmanned aerial vehicles (UAVs).\n- The literature consistently highlights several challenges and gaps in agent orchestration, such as ensuring reliable resource allocation, managing complexity in networks, and dealing with dynamic and unpredictable environments, particularly in scenarios involving real-time applications or mobility.\n\nRecommended next step: To deepen the understanding of agent orchestration and handoffs, further exploration of specific case studies on SDN applications and UAV operations should be pursued, along with a review of current research addressing the identified gaps in these areas.",
+  "analysis_notes": "**Analysis Summary:**\n\n- **Source Coverage:** The research explores agent orchestration and handoff mechanisms across various technologies including 5G networks, unmanned aerial vehicles (UAVs), and WiFi networks. Specific sources analyze implementation details and challenges within these sectors.\n\n- **Key Themes:** The core concepts include the efficient management of agents for complex tasks (agent orchestration) and ensuring continuity in service as devices transition between network segments (handoffs). Applications include network slicing, real-time communications, and adaptive routing among different solvers.\n\n- **Strong Signals:** There is a consensus on the importance of dynamic routing and resource allocation in enhancing system performance. Challenges such as managing complexity and real-time adaptability are highlighted consistently. Emerging applications, particularly in 5G and UAV technology, represent significant opportunities.\n\n- **Gaps / Risks:** Literature indicates open research challenges in ensuring reliable resource allocation, dealing with network complexities and uncertainties, and the need for standardized frameworks. There is a noticeable lack of comprehensive reviews that connect these concepts cohesively across varying contexts.\n\n- **Next Step:** Further investigation into specific case studies focusing on SDN applications and UAV operations is recommended. In addition, a detailed review of current literature addressing identified challenges, particularly around resource allocation and orchestration strategies, should be undertaken to facilitate a deeper understanding of practical implementations.",
+  "final_answer": "Final answer for: Explain agent orchestration and handoffs in simple terms\n\nSummary:\n- Agent orchestration involves managing and coordinating multiple software or hardware agents to accomplish complex tasks efficiently. It determines which agent should perform specific functions, optimizing system performance through dynamic routing.\n- Handoffs refer to the seamless transfer of control between agents or network segments, ensuring uninterrupted service, especially in mobile environments or while devices move across networks.\n- These concepts are crucial in advanced technologies like 5G networks and unmanned aerial vehicles (UAVs), where reliable communication and efficient resource management are critical.\n\nEvidence snapshot:\n- Key sources include surveys on network slicing, UAV applications, and programmatic orchestration in WiFi networks.\n\nTakeaway: Agent orchestration and handoffs are essential for maintaining efficient and continuous service in complex, dynamic networked systems.",
+  "agent_results": [
+    {
+      "agent": "researcher",
+      "content": "Research notes for: Explain agent orchestration and handoffs in simple terms  \nCore topic: Agent orchestration and handoffs in networked systems  \n\nKey takeaways:  \n- Agent orchestration refers to the management and coordination of multiple agents (software or hardware components) to perform complex tasks efficiently. It involves decisions on which agent to use for specific functions, often enhancing system performance through dynamic routing among various solvers or services.\n- Handoffs, in networking contexts, signify the transition of control or the continuity of communication as devices move across different network segments or agents. This ensures that the service remains uninterrupted, vital in scenarios like mobile communications or networked drones.\n- Various applications of agent orchestration are observed in advanced technologies, including network slicing in 5G, software-defined networks (SDN), and unmanned aerial vehicles (UAVs).\n- The literature consistently highlights several challenges and gaps in agent orchestration, such as ensuring reliable resource allocation, managing complexity in networks, and dealing with dynamic and unpredictable environments, particularly in scenarios involving real-time applications or mobility.\n\nRecommended next step: To deepen the understanding of agent orchestration and handoffs, further exploration of specific case studies on SDN applications and UAV operations should be pursued, along with a review of current research addressing the identified gaps in these areas.",
+      "metadata": {
+        "source_count": 5,
+        "keywords": [
+          "explain",
+          "agent",
+          "orchestration",
+          "handoffs",
+          "simple"
+        ],
+        "mode": "llm",
+        "input_tokens": 1144,
+        "output_tokens": 263,
+        "cost_usd": 0.050100000000000006,
+        "fallback": null
+      }
+    },
+    {
+      "agent": "analyst",
+      "content": "**Analysis Summary:**\n\n- **Source Coverage:** The research explores agent orchestration and handoff mechanisms across various technologies including 5G networks, unmanned aerial vehicles (UAVs), and WiFi networks. Specific sources analyze implementation details and challenges within these sectors.\n\n- **Key Themes:** The core concepts include the efficient management of agents for complex tasks (agent orchestration) and ensuring continuity in service as devices transition between network segments (handoffs). Applications include network slicing, real-time communications, and adaptive routing among different solvers.\n\n- **Strong Signals:** There is a consensus on the importance of dynamic routing and resource allocation in enhancing system performance. Challenges such as managing complexity and real-time adaptability are highlighted consistently. Emerging applications, particularly in 5G and UAV technology, represent significant opportunities.\n\n- **Gaps / Risks:** Literature indicates open research challenges in ensuring reliable resource allocation, dealing with network complexities and uncertainties, and the need for standardized frameworks. There is a noticeable lack of comprehensive reviews that connect these concepts cohesively across varying contexts.\n\n- **Next Step:** Further investigation into specific case studies focusing on SDN applications and UAV operations is recommended. In addition, a detailed review of current literature addressing identified challenges, particularly around resource allocation and orchestration strategies, should be undertaken to facilitate a deeper understanding of practical implementations.",
+      "metadata": {
+        "source_count": 5,
+        "key_points": [
+          "explain",
+          "agent",
+          "orchestration",
+          "handoffs"
+        ],
+        "mode": "llm",
+        "input_tokens": 1395,
+        "output_tokens": 266,
+        "cost_usd": 0.05781,
+        "gap_summary": "No major gap detected from the current synthetic source set."
+      }
+    },
+    {
+      "agent": "writer",
+      "content": "Final answer for: Explain agent orchestration and handoffs in simple terms\n\nSummary:\n- Agent orchestration involves managing and coordinating multiple software or hardware agents to accomplish complex tasks efficiently. It determines which agent should perform specific functions, optimizing system performance through dynamic routing.\n- Handoffs refer to the seamless transfer of control between agents or network segments, ensuring uninterrupted service, especially in mobile environments or while devices move across networks.\n- These concepts are crucial in advanced technologies like 5G networks and unmanned aerial vehicles (UAVs), where reliable communication and efficient resource management are critical.\n\nEvidence snapshot:\n- Key sources include surveys on network slicing, UAV applications, and programmatic orchestration in WiFi networks.\n\nTakeaway: Agent orchestration and handoffs are essential for maintaining efficient and continuous service in complex, dynamic networked systems.",
+      "metadata": {
+        "source_count": 5,
+        "has_analysis": true,
+        "mode": "llm",
+        "input_tokens": 818,
+        "output_tokens": 167,
+        "cost_usd": 0.03456
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "workflow_start",
+      "payload": {
+        "iteration": 0,
+        "query": "Explain agent orchestration and handoffs in simple terms"
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "researcher",
+        "reason": "research_notes missing",
+        "iteration": 1,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "researcher_run",
+      "payload": {
+        "query": "Explain agent orchestration and handoffs in simple terms",
+        "source_count": 5,
+        "keywords": [
+          "explain",
+          "agent",
+          "orchestration",
+          "handoffs",
+          "simple"
+        ],
+        "mode": "llm",
+        "fallback": null
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "analyst",
+        "reason": "analysis_notes missing",
+        "iteration": 2,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "analyst_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "key_points": [
+          "explain",
+          "agent",
+          "orchestration",
+          "handoffs"
+        ]
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "writer",
+        "reason": "research and analysis available",
+        "iteration": 3,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "writer_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "has_analysis": true
+      }
+    },
+    {
+      "name": "workflow_end",
+      "payload": {
+        "iteration": 3,
+        "route_history": [
+          "researcher",
+          "analyst",
+          "writer"
+        ],
+        "has_final_answer": true
+      }
+    }
+  ],
+  "errors": []
+}

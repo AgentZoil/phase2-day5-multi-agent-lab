@@ -1,0 +1,204 @@
+{
+  "request": {
+    "query": "Explain GraphRAG in 200 words",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 3,
+  "route_history": [
+    "researcher",
+    "analyst",
+    "writer"
+  ],
+  "sources": [
+    {
+      "title": "Retrieval-Augmented Generation with Graphs (GraphRAG)",
+      "url": "http://arxiv.org/abs/2501.00309",
+      "snippet": "Retrieval-augmented generation (RAG) is a powerful technique that enhances downstream task execution by retrieving additional information, such as knowledge, skills, and tools from external sources. Graph, by its intrinsic \"nodes connected by edges\" nature, encodes massive heterogeneous and relational information, making it a golden resource for RAG in tremendous real-world applications. As a result, we have recently witnessed increasing attention on equipping RAG with Graph, i.e., GraphRAG. However, unlike conventional RAG, where the retriever, generator, and external data sources can be uniformly designed in the neural-embedding space, the uniqueness of graph-structured data, such as diverse-formatted and domain-specific relational knowledge, poses unique and significant challenges when designing GraphRAG for different domains. Given the broad applicability, the associated design challenges, and the recent surge in GraphRAG, a systematic and up-to-date survey of its key concepts and techniques is urgently desired. Following this motivation, we present a comprehensive and up-to-date survey on GraphRAG. Our survey first proposes a holistic GraphRAG framework by defining its key components, including query processor, retriever, organizer, generator, and data source. Furthermore, recognizing that graphs in different domains exhibit distinct relational patterns and require dedicated designs, we review GraphRAG techniques uniquely tailored to each domain. Finally, we discuss research challenges and brainstorm directions to inspire cross-disciplinary opportunities. Our survey repository is publicly maintained at https://github.com/Graph-RAG/GraphRAG/.",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 17,
+        "publication_year": 2024,
+        "rank_score": 6.87
+      }
+    },
+    {
+      "title": "Query-Driven Multimodal GraphRAG: Dynamic Local Knowledge Graph Construction for Online Reasoning",
+      "url": "https://doi.org/10.18653/v1/2025.findings-acl.1100",
+      "snippet": "An increasing adoption of Large Language Models (LLMs) in complex reasoning tasks necessitates their interpretability and reliability.Recent advances to this end include retrievalaugmented generation (RAG) and knowledge graph-enhanced RAG (GraphRAG), whereas they are constrained by static knowledge bases and ineffective multimodal data integration.In response, we propose a Query-Driven Multimodal GraphRAG framework that dynamically constructs local knowledge graphs tailored to query semantics.Our approach 1) derives graph patterns from query semantics to guide knowledge extraction, 2) employs a multi-path retrieval strategy to pinpoint core knowledge, and 3) supplements missing multimodal information ad hoc.Experimental results on the MultimodalQA and WebQA datasets demonstrate that our framework achieves the state-of-the-art performance among unsupervised competitors, particularly excelling in cross-modal understanding of complex queries.The code is publicly available at https://github.com/DMiC",
+      "metadata": {
+        "provider": "openalex",
+        "cited_by_count": 4,
+        "publication_year": 2025,
+        "rank_score": 6.74
+      }
+    },
+    {
+      "title": "On arch factorization and subword universality for words and compressed words",
+      "url": "http://arxiv.org/abs/2304.11932v1",
+      "snippet": "Using arch-jumping functions and properties of the arch factorization of words, we propose a new algorithm for computing the subword circular universality index of words. We also introduce the subword universality signature for words, that leads to simple algorithms for the universality indexes of SLP-compressed words.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 6.2
+      }
+    },
+    {
+      "title": "Recurrent Partial Words",
+      "url": "http://arxiv.org/abs/1108.3623v1",
+      "snippet": "Partial words are sequences over a finite alphabet that may contain wildcard symbols, called holes, which match or are compatible with all letters; partial words without holes are said to be full words (or simply words). Given an infinite partial word w, the number of distinct full words over the alphabet that are compatible with factors of w of length n, called subwords of w, refers to a measure of complexity of infinite partial words so-called subword complexity. This measure is of particular interest because we can construct partial words with subword complexities not achievable by full words. In this paper, we consider the notion of recurrence over infinite partial words, that is, we study whether all of the finite subwords of a given infinite partial word appear infinitely often, and we establish connections between subword complexity and recurrence in this more general framework.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 6.2
+      }
+    },
+    {
+      "title": "A Classification of Trapezoidal Words",
+      "url": "http://arxiv.org/abs/1108.3629v1",
+      "snippet": "Trapezoidal words are finite words having at most n+1 distinct factors of length n, for every n>=0. They encompass finite Sturmian words. We distinguish trapezoidal words into two disjoint subsets: open and closed trapezoidal words. A trapezoidal word is closed if its longest repeated prefix has exactly two occurrences in the word, the second one being a suffix of the word. Otherwise it is open. We show that open trapezoidal words are all primitive and that closed trapezoidal words are all Sturmian. We then show that trapezoidal palindromes are closed (and therefore Sturmian). This allows us to characterize the special factors of Sturmian palindromes. We end with several open problems.",
+      "metadata": {
+        "provider": "arxiv",
+        "rank_score": 6.2
+      }
+    }
+  ],
+  "research_notes": "Research notes for: Explain GraphRAG in 200 words  \nCore topic: GraphRAG (Graph Retrieval-Augmented Generation)  \n\nKey takeaways:  \n- GraphRAG integrates the concept of graphs into retrieval-augmented generation (RAG), utilizing the relational nature of graphs to enhance information retrieval for natural language processing tasks.  \n- Unlike traditional RAG, GraphRAG must address unique challenges associated with graph-structured data, which varies across domains in terms of format and relational knowledge.  \n- A comprehensive framework for GraphRAG includes components such as a query processor, retriever, organizer, generator, and data source, essential for proper function across different applications.  \n- Recent efforts have led to the development of dynamic, query-driven multimodal approaches that construct local knowledge graphs to improve reasoning and cross-modal understanding in complex queries.  \n- Despite its potential, there is a noted need for a systematic review of GraphRAG techniques tailored for specific domains and to address the challenges that arise from integrating multimodal data.\n\nRecommended next step: Conduct a systematic review of the current literature on GraphRAG to identify additional applications, challenges, and potential technological advancements, including empirical studies on its effectiveness across various tasks.",
+  "analysis_notes": "**Analysis Summary:**\n\n- **Source Coverage:** Research primarily focuses on Graph Retrieval-Augmented Generation (GraphRAG), examining its structure, challenges, and applications across diverse domains. Key elements include traditional RAG concepts, dynamic multimodal graph approaches, and empirical validation in tasks like query processing.\n\n- **Key Themes:** The integration of graph structures in RAG enhances information retrieval by utilizing relational data. A comprehensive framework emphasizes components like query processors, retrievers, organizers, generators, and data sources. The literature also highlights the necessity for specialized designs for varied domains and the potential of dynamic, query-driven approaches to improve reasoning and understanding.\n\n- **Strong Signals:** GraphRAG represents an evolving approach with significant potential for improving performance in complex reasoning tasks and multimodal data integration. The development of local knowledge graphs indicates a shift towards more responsive and context-aware systems.\n\n- **Gaps / Risks:** There is a lack of systematic reviews addressing the comprehensive range of GraphRAG techniques, particularly their application-specific challenges. The integration of multimodal data remains an area with unexplored challenges that may hinder broader implementation and effectiveness.\n\n- **Next Step:** Conduct a systematic review of existing literature on GraphRAG, focusing on identifying domain-specific applications, technological advancements, and empirical studies to assess its effectiveness in various tasks. This would inform enhancements and bridge identified gaps.",
+  "final_answer": "Final answer for: Explain GraphRAG in 200 words\n\nSummary:\n- GraphRAG (Graph Retrieval-Augmented Generation) enhances traditional RAG by integrating graph structures, leveraging their relational properties for improved information retrieval in natural language processing tasks.\n- This approach faces unique challenges specific to graph-structured data formats and relational knowledge across various domains, necessitating tailored solutions.\n- A robust framework for GraphRAG includes vital components such as query processors, retrievers, organizers, generators, and data sources, which enable efficient operation across different applications.\n- Recent advancements focus on dynamic, query-driven multimodal methods that build local knowledge graphs to bolster reasoning and cross-modal comprehension, showcasing the potential for responsive systems in complex query environments.\n- However, current research lacks systematic reviews to identify specific applications, challenges, and technological advancements related to GraphRAG, particularly in accommodating multimodal data.\n\nEvidence snapshot:\n- Key sources include the original paper on GraphRAG: http://arxiv.org/abs/2501.00309 and the multimodal approach: https://doi.org/10.18653/v1/2025.findings-acl.1100.\n\nTakeaway: GraphRAG is a promising advancement in retrieval-augmented generation, yet requires further empirical study and systematic analysis to maximize its effectiveness and address integration challenges.",
+  "agent_results": [
+    {
+      "agent": "researcher",
+      "content": "Research notes for: Explain GraphRAG in 200 words  \nCore topic: GraphRAG (Graph Retrieval-Augmented Generation)  \n\nKey takeaways:  \n- GraphRAG integrates the concept of graphs into retrieval-augmented generation (RAG), utilizing the relational nature of graphs to enhance information retrieval for natural language processing tasks.  \n- Unlike traditional RAG, GraphRAG must address unique challenges associated with graph-structured data, which varies across domains in terms of format and relational knowledge.  \n- A comprehensive framework for GraphRAG includes components such as a query processor, retriever, organizer, generator, and data source, essential for proper function across different applications.  \n- Recent efforts have led to the development of dynamic, query-driven multimodal approaches that construct local knowledge graphs to improve reasoning and cross-modal understanding in complex queries.  \n- Despite its potential, there is a noted need for a systematic review of GraphRAG techniques tailored for specific domains and to address the challenges that arise from integrating multimodal data.\n\nRecommended next step: Conduct a systematic review of the current literature on GraphRAG to identify additional applications, challenges, and potential technological advancements, including empirical studies on its effectiveness across various tasks.",
+      "metadata": {
+        "source_count": 5,
+        "keywords": [
+          "explain",
+          "graphrag",
+          "200",
+          "words"
+        ],
+        "mode": "llm",
+        "input_tokens": 1035,
+        "output_tokens": 244,
+        "cost_usd": 0.04569,
+        "fallback": null
+      }
+    },
+    {
+      "agent": "analyst",
+      "content": "**Analysis Summary:**\n\n- **Source Coverage:** Research primarily focuses on Graph Retrieval-Augmented Generation (GraphRAG), examining its structure, challenges, and applications across diverse domains. Key elements include traditional RAG concepts, dynamic multimodal graph approaches, and empirical validation in tasks like query processing.\n\n- **Key Themes:** The integration of graph structures in RAG enhances information retrieval by utilizing relational data. A comprehensive framework emphasizes components like query processors, retrievers, organizers, generators, and data sources. The literature also highlights the necessity for specialized designs for varied domains and the potential of dynamic, query-driven approaches to improve reasoning and understanding.\n\n- **Strong Signals:** GraphRAG represents an evolving approach with significant potential for improving performance in complex reasoning tasks and multimodal data integration. The development of local knowledge graphs indicates a shift towards more responsive and context-aware systems.\n\n- **Gaps / Risks:** There is a lack of systematic reviews addressing the comprehensive range of GraphRAG techniques, particularly their application-specific challenges. The integration of multimodal data remains an area with unexplored challenges that may hinder broader implementation and effectiveness.\n\n- **Next Step:** Conduct a systematic review of existing literature on GraphRAG, focusing on identifying domain-specific applications, technological advancements, and empirical studies to assess its effectiveness in various tasks. This would inform enhancements and bridge identified gaps.",
+      "metadata": {
+        "source_count": 5,
+        "key_points": [
+          "explain",
+          "graphrag",
+          "words",
+          "core"
+        ],
+        "mode": "llm",
+        "input_tokens": 1268,
+        "output_tokens": 270,
+        "cost_usd": 0.054240000000000003,
+        "gap_summary": "No major gap detected from the current synthetic source set."
+      }
+    },
+    {
+      "agent": "writer",
+      "content": "Final answer for: Explain GraphRAG in 200 words\n\nSummary:\n- GraphRAG (Graph Retrieval-Augmented Generation) enhances traditional RAG by integrating graph structures, leveraging their relational properties for improved information retrieval in natural language processing tasks.\n- This approach faces unique challenges specific to graph-structured data formats and relational knowledge across various domains, necessitating tailored solutions.\n- A robust framework for GraphRAG includes vital components such as query processors, retrievers, organizers, generators, and data sources, which enable efficient operation across different applications.\n- Recent advancements focus on dynamic, query-driven multimodal methods that build local knowledge graphs to bolster reasoning and cross-modal comprehension, showcasing the potential for responsive systems in complex query environments.\n- However, current research lacks systematic reviews to identify specific applications, challenges, and technological advancements related to GraphRAG, particularly in accommodating multimodal data.\n\nEvidence snapshot:\n- Key sources include the original paper on GraphRAG: http://arxiv.org/abs/2501.00309 and the multimodal approach: https://doi.org/10.18653/v1/2025.findings-acl.1100.\n\nTakeaway: GraphRAG is a promising advancement in retrieval-augmented generation, yet requires further empirical study and systematic analysis to maximize its effectiveness and address integration challenges.",
+      "metadata": {
+        "source_count": 5,
+        "has_analysis": true,
+        "mode": "llm",
+        "input_tokens": 765,
+        "output_tokens": 266,
+        "cost_usd": 0.03891
+      }
+    }
+  ],
+  "trace": [
+    {
+      "name": "workflow_start",
+      "payload": {
+        "iteration": 0,
+        "query": "Explain GraphRAG in 200 words"
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "researcher",
+        "reason": "research_notes missing",
+        "iteration": 1,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "researcher_run",
+      "payload": {
+        "query": "Explain GraphRAG in 200 words",
+        "source_count": 5,
+        "keywords": [
+          "explain",
+          "graphrag",
+          "200",
+          "words"
+        ],
+        "mode": "llm",
+        "fallback": null
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "analyst",
+        "reason": "analysis_notes missing",
+        "iteration": 2,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "analyst_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "key_points": [
+          "explain",
+          "graphrag",
+          "words",
+          "core"
+        ]
+      }
+    },
+    {
+      "name": "supervisor_route",
+      "payload": {
+        "route": "writer",
+        "reason": "research and analysis available",
+        "iteration": 3,
+        "max_iterations": 6
+      }
+    },
+    {
+      "name": "writer_run",
+      "payload": {
+        "status": "ok",
+        "mode": "llm",
+        "source_count": 5,
+        "has_analysis": true
+      }
+    },
+    {
+      "name": "workflow_end",
+      "payload": {
+        "iteration": 3,
+        "route_history": [
+          "researcher",
+          "analyst",
+          "writer"
+        ],
+        "has_final_answer": true
+      }
+    }
+  ],
+  "errors": []
+}

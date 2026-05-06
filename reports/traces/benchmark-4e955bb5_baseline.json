@@ -1,0 +1,26 @@
+{
+  "request": {
+    "query": "Explain GraphRAG in 200 words",
+    "max_sources": 5,
+    "audience": "technical learners"
+  },
+  "iteration": 0,
+  "route_history": [],
+  "sources": [],
+  "research_notes": null,
+  "analysis_notes": null,
+  "final_answer": "GraphRAG (Graph-based Retrieval-Augmented Generation) is an advanced framework that enhances the capabilities of large language models (LLMs) by integrating graph structures for knowledge retrieval and content generation. Unlike traditional retrieval-augmented generation models, which primarily use linear document retrieval, GraphRAG leverages a graph-based representation of knowledge, where entities and their relationships are stored in a graph format.\n\nIn GraphRAG, information is retrieved through graph traversal methods that efficiently find relevant data nodes based on the user's query. This allows for more contextually rich and semantically accurate retrieval of information. The model generates responses by utilizing graph embeddings, which capture the interconnections between different pieces of information, enabling it to provide more nuanced and informative outputs.\n\nThe architecture typically includes a graph constructor to build the knowledge graph, a retriever that extracts relevant nodes based on the input, and a generator that formulates responses based on the gathered information. This multi-step process results in high-quality, context-aware text generation that can be particularly beneficial in applications like question-answering, summarization, and chatbots.\n\nGraphRAG showcases the potential of combining graph theory with machine learning, opening new avenues for handling complex information.",
+  "agent_results": [
+    {
+      "agent": "supervisor",
+      "content": "GraphRAG (Graph-based Retrieval-Augmented Generation) is an advanced framework that enhances the capabilities of large language models (LLMs) by integrating graph structures for knowledge retrieval and content generation. Unlike traditional retrieval-augmented generation models, which primarily use linear document retrieval, GraphRAG leverages a graph-based representation of knowledge, where entities and their relationships are stored in a graph format.\n\nIn GraphRAG, information is retrieved through graph traversal methods that efficiently find relevant data nodes based on the user's query. This allows for more contextually rich and semantically accurate retrieval of information. The model generates responses by utilizing graph embeddings, which capture the interconnections between different pieces of information, enabling it to provide more nuanced and informative outputs.\n\nThe architecture typically includes a graph constructor to build the knowledge graph, a retriever that extracts relevant nodes based on the input, and a generator that formulates responses based on the gathered information. This multi-step process results in high-quality, context-aware text generation that can be particularly beneficial in applications like question-answering, summarization, and chatbots.\n\nGraphRAG showcases the potential of combining graph theory with machine learning, opening new avenues for handling complex information.",
+      "metadata": {
+        "input_tokens": 49,
+        "output_tokens": 239,
+        "cost_usd": 0.01581
+      }
+    }
+  ],
+  "trace": [],
+  "errors": []
+}
