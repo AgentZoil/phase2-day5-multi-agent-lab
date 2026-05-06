@@ -28,7 +28,11 @@ class ResearcherAgent(BaseAgent):
         max_sources = state.request.max_sources
         keywords = self._extract_keywords(query)
         sources = SearchClient().search(query=query, max_results=max_sources)
-        llm_notes, llm_meta = self._synthesize_with_llm(query=query, keywords=keywords, sources=sources)
+        llm_notes, llm_meta = self._synthesize_with_llm(
+            query=query,
+            keywords=keywords,
+            sources=sources,
+        )
         if llm_notes is not None:
             state.sources = sources
             state.research_notes = llm_notes
@@ -44,7 +48,11 @@ class ResearcherAgent(BaseAgent):
             }
         else:
             state.sources = sources
-            state.research_notes = self._build_research_notes(query=query, keywords=keywords, sources=sources)
+            state.research_notes = self._build_research_notes(
+                query=query,
+                keywords=keywords,
+                sources=sources,
+            )
             mode = "fallback"
             metadata = {
                 "source_count": len(sources),
@@ -97,7 +105,11 @@ class ResearcherAgent(BaseAgent):
         return keywords[:5] or ["multi", "agent", "systems"]
 
     @staticmethod
-    def _build_research_notes(query: str, keywords: list[str], sources: list[SourceDocument]) -> str:
+    def _build_research_notes(
+        query: str,
+        keywords: list[str],
+        sources: list[SourceDocument],
+    ) -> str:
         topic = " ".join(keywords[:3]) if keywords else query
         if sources:
             bullets = "\n".join(f"- {source.title}: {source.snippet}" for source in sources)

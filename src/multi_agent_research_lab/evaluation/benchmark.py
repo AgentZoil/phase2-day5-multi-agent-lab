@@ -1,12 +1,11 @@
 """Benchmark skeleton for single-agent vs multi-agent."""
 
+from collections.abc import Callable
 from time import perf_counter
-from typing import Callable
 
 from multi_agent_research_lab.core.schemas import BenchmarkMetrics
 from multi_agent_research_lab.core.state import ResearchState
 from multi_agent_research_lab.observability.logging import get_run_id
-
 
 Runner = Callable[[str], ResearchState]
 

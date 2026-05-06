@@ -6,7 +6,13 @@ from dataclasses import dataclass
 from typing import Any
 
 from langgraph.graph import END, START, StateGraph
-from multi_agent_research_lab.agents import AnalystAgent, ResearcherAgent, SupervisorAgent, WriterAgent
+
+from multi_agent_research_lab.agents import (
+    AnalystAgent,
+    ResearcherAgent,
+    SupervisorAgent,
+    WriterAgent,
+)
 from multi_agent_research_lab.core.config import get_settings
 from multi_agent_research_lab.core.errors import AgentExecutionError, ValidationError
 from multi_agent_research_lab.core.state import ResearchState
@@ -37,8 +43,14 @@ class MultiAgentWorkflow:
         graph = StateGraph(ResearchState)
 
         graph.add_node("supervisor", lambda state: self._run_supervisor(bundle, state))
-        graph.add_node("researcher", lambda state: self._run_worker(bundle.researcher.run, "researcher", state))
-        graph.add_node("analyst", lambda state: self._run_worker(bundle.analyst.run, "analyst", state))
+        graph.add_node(
+            "researcher",
+            lambda state: self._run_worker(bundle.researcher.run, "researcher", state),
+        )
+        graph.add_node(
+            "analyst",
+            lambda state: self._run_worker(bundle.analyst.run, "analyst", state),
+        )
         graph.add_node("writer", lambda state: self._run_worker(bundle.writer.run, "writer", state))
 
         graph.add_edge(START, "supervisor")
@@ -106,7 +118,11 @@ class MultiAgentWorkflow:
                 )
                 state.final_answer = self._fallback_final_answer(state)
                 result = state
-            final_state = result if isinstance(result, ResearchState) else ResearchState.model_validate(result)
+            final_state = (
+                result
+                if isinstance(result, ResearchState)
+                else ResearchState.model_validate(result)
+            )
             final_state.add_trace_event(
                 "workflow_end",
                 {
@@ -188,7 +204,12 @@ class MultiAgentWorkflow:
             )
         return state
 
-    def _recover_from_failure(self, state: ResearchState, route: str, exc: Exception) -> ResearchState:
+    def _recover_from_failure(
+        self,
+        state: ResearchState,
+        route: str,
+        exc: Exception,
+    ) -> ResearchState:
         """Create a safe fallback so the workflow can still finish."""
 
         if route == "researcher":

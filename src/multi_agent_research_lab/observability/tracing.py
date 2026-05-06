@@ -4,9 +4,9 @@ This file intentionally avoids binding to one provider. Students can plug in Lan
 Langfuse, OpenTelemetry, or simple JSON traces.
 """
 
+import logging
 from collections.abc import Iterator
 from contextlib import contextmanager
-import logging
 from time import perf_counter
 from typing import Any
 

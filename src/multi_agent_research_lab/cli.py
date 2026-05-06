@@ -13,15 +13,23 @@ from rich.panel import Panel
 from multi_agent_research_lab.core.config import get_settings
 from multi_agent_research_lab.core.errors import StudentTodoError
 from multi_agent_research_lab.core.guardrails import evaluate_query
-from multi_agent_research_lab.core.schemas import AgentName, AgentResult, ResearchQuery
+from multi_agent_research_lab.core.schemas import (
+    AgentName,
+    AgentResult,
+    ResearchQuery,
+)
 from multi_agent_research_lab.core.state import ResearchState
 from multi_agent_research_lab.evaluation.benchmark import run_benchmark
 from multi_agent_research_lab.evaluation.report import render_case_markdown_report
 from multi_agent_research_lab.graph.workflow import MultiAgentWorkflow
-from multi_agent_research_lab.observability.logging import configure_logging, reset_run_id, set_run_id
+from multi_agent_research_lab.observability.logging import (
+    configure_logging,
+    reset_run_id,
+    set_run_id,
+)
 from multi_agent_research_lab.observability.tracing import trace_span
-from multi_agent_research_lab.services.storage import LocalArtifactStore
 from multi_agent_research_lab.services.llm_client import LLMClient
+from multi_agent_research_lab.services.storage import LocalArtifactStore
 
 app = typer.Typer(help="Multi-Agent Research Lab starter CLI")
 console = Console()
@@ -103,8 +111,14 @@ def benchmark(
             case_id=case_id,
         )
         artifact_store = LocalArtifactStore()
-        baseline_trace_path = artifact_store.write_trace(f"traces/{baseline_metrics.run_id}_baseline.json", baseline_state)
-        multi_trace_path = artifact_store.write_trace(f"traces/{multi_metrics.run_id}_multi-agent.json", multi_state)
+        baseline_trace_path = artifact_store.write_trace(
+            f"traces/{baseline_metrics.run_id}_baseline.json",
+            baseline_state,
+        )
+        multi_trace_path = artifact_store.write_trace(
+            f"traces/{multi_metrics.run_id}_multi-agent.json",
+            multi_state,
+        )
         baseline_metrics.trace_link = str(baseline_trace_path)
         multi_metrics.trace_link = str(multi_trace_path)
         section = render_case_markdown_report(case_id, [baseline_metrics, multi_metrics])
@@ -119,7 +133,8 @@ def benchmark(
     console.print(Panel.fit(report, title="Benchmark Report"))
     console.print(
         f"Saved report to {report_file} "
-        f"(baseline routes={baseline_state.route_history}, multi-agent routes={multi_state.route_history})"
+        f"(baseline routes={baseline_state.route_history}, "
+        f"multi-agent routes={multi_state.route_history})"
     )
 
 

@@ -51,7 +51,11 @@ class SearchClient:
 
         if settings.tavily_api_key:
             candidate_sources.extend(
-                self._search_tavily(query=query, max_results=max_results, api_key=settings.tavily_api_key)
+                self._search_tavily(
+                    query=query,
+                    max_results=max_results,
+                    api_key=settings.tavily_api_key,
+                )
             )
 
         candidate_sources.extend(self._search_openalex(query=query, max_results=max_results))
@@ -178,9 +182,13 @@ class SearchClient:
         ns = {"atom": "http://www.w3.org/2005/Atom"}
         sources: list[SourceDocument] = []
         for entry in root.findall("atom:entry", ns)[:max_results]:
-            title = SearchClient._normalize_text(entry.findtext("atom:title", default="", namespaces=ns))
+            title = SearchClient._normalize_text(
+                entry.findtext("atom:title", default="", namespaces=ns)
+            )
             url = entry.findtext("atom:id", default="", namespaces=ns) or None
-            summary = SearchClient._normalize_text(entry.findtext("atom:summary", default="", namespaces=ns))
+            summary = SearchClient._normalize_text(
+                entry.findtext("atom:summary", default="", namespaces=ns)
+            )
             if not title and not summary:
                 continue
             sources.append(
@@ -221,7 +229,9 @@ class SearchClient:
         for item in results[:max_results]:
             title = str(item.get("title") or query)
             snippet = str(item.get("snippet") or "")
-            snippet = SearchClient._normalize_text(snippet.replace("<span class=\"searchmatch\">", "").replace("</span>", ""))
+            snippet = SearchClient._normalize_text(
+                snippet.replace("<span class=\"searchmatch\">", "").replace("</span>", "")
+            )
             if not snippet:
                 continue
             sources.append(
@@ -268,13 +278,23 @@ class SearchClient:
         snippet_terms = SearchClient._extract_terms(source.snippet)
         title_overlap = len(query_terms & title_terms)
         snippet_overlap = len(query_terms & snippet_terms)
-        exact_phrase_bonus = 1.5 if SearchClient._phrase_present(query_terms, source.title, source.snippet) else 0.0
+        exact_phrase_bonus = (
+            1.5
+            if SearchClient._phrase_present(query_terms, source.title, source.snippet)
+            else 0.0
+        )
         citation_bonus = 0.0
         if source.metadata.get("cited_by_count"):
             citation_bonus += min(float(source.metadata["cited_by_count"]) / 100.0, 2.0)
         if source.metadata.get("publication_year"):
             citation_bonus += 0.2
-        return provider_weight + (title_overlap * 2.0) + snippet_overlap + exact_phrase_bonus + citation_bonus
+        return (
+            provider_weight
+            + (title_overlap * 2.0)
+            + snippet_overlap
+            + exact_phrase_bonus
+            + citation_bonus
+        )
 
     @staticmethod
     def _annotate_source(source: SourceDocument, score: float) -> SourceDocument:
